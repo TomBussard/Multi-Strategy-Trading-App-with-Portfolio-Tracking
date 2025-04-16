@@ -10,6 +10,13 @@ from performances import PortfolioAnalyzer
 from datetime import datetime, timedelta
 import numpy as np
 
+if not os.path.exists("fund_management.db"):
+    from database_manager import DatabaseManager
+    db_manager = DatabaseManager()
+    db_manager.connect()
+    db_manager.create_tables()
+    db_manager.populate_initial_data()
+    db_manager.close()
 # Configuration de la page Streamlit
 st.set_page_config(page_title="Gestion de Fonds Multi-Stratégies", layout="wide")
 
