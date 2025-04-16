@@ -2,5 +2,4 @@ streamlit
 pandas
 numpy
 yfinance
-sqlite3
 matplotlib
